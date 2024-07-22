@@ -13,6 +13,6 @@ public:
             ans=max(ans, max(prefix,suffix));
         }
 
-        return (int)ans;
+        return ans;
     }
 };
