@@ -3,10 +3,9 @@ public:
     int countSeniors(vector<string>& details) {
         int count=0;
         for(const auto str:details){
-            if(str[11]==54 && str[12]==48) continue;
-            else if(str[11]>=54 && str[12]>=48){
-                count++;
-            }
+            string age=str.substr(11,2);
+            int num=stoi(age);
+            if(num>60) count++;
         }
         return count;
     }
